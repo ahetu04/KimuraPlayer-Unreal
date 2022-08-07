@@ -1,0 +1,39 @@
+{
+	"FileVersion": 3,
+	"Version": 0.0500,
+	"VersionName": "0.5.0",
+	"EngineVersion": "",
+	"FriendlyName": "Kimura Player",
+	"Description": "High performance playback of alembic content",
+	"Category": "Graphics",
+	"CreatedBy": "Alexandre Hetu",
+	"CreatedByURL": "https://www.KimuraPlayer.com",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": true,
+	"IsExperimentalVersion": true,
+	"Installed": false,
+	"Modules": 
+	[
+		{
+			"Name": "Kimura",
+			"Type": "Runtime",
+			"LoadingPhase": "PostConfigInit"
+		},
+		{
+			"Name": "KimuraConverter",
+			"Type": "Editor",
+			"LoadingPhase": "Default",
+			"WhitelistPlatforms": [ "Win64" ]
+		}
+	],
+	"Plugins": 
+	[
+		{
+			"Name": "MovieRenderPipeline",
+			"Enabled": true
+		}
+	]
+}
