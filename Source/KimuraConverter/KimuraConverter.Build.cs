@@ -64,9 +64,26 @@ public class KimuraConverter : ModuleRules
 			PublicIncludePaths.Add(Path.Combine(ModuleDirectory, "Libraries", "Include"));
 			if (Target.Platform == UnrealTargetPlatform.Win64)
 			{
-				PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, "Libraries", "x64", "Release", "KimuraConverter.lib"));
+				switch (Target.WindowsPlatform.Compiler)
+                {
+					case WindowsCompiler.VisualStudio2019:
+                    {
+						PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, "Libraries", "x64", "Release", "KimuraConverter2019.lib"));
+						break;
+                    }
+
+					case WindowsCompiler.VisualStudio2022:
+					{
+						PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, "Libraries", "x64", "Release", "KimuraConverter2022.lib"));
+						break;
+					}
+
+					default:
+					{
+						break;
+					}
+				}
 			}
 		}
-
 	}
 }
